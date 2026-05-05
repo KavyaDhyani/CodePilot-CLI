@@ -181,7 +181,7 @@ function openInBrowser(fileName) {
 }
 
 // Typing speed (ms per character). Higher = slower.
-const TYPE_DELAY_MS = 10;
+const TYPE_DELAY_MS = 5;
 
 async function typeWrite(text, delay = TYPE_DELAY_MS) {
   for (const char of text) {
@@ -273,10 +273,6 @@ async function agentLoop(userInput) {
     messages.push({ role: "assistant", content: output });
 
     const { thought, action, data } = parseOutput(output);
-
-    if (thought) {
-      await typeWrite(`Thought: ${thought}\n`, 10);
-    }
 
     if (action === "create_file") {
       const fileName = createFile(data);

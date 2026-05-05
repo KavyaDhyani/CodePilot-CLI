@@ -1,61 +1,62 @@
-* {
-    box-sizing: border-box;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    font-family: 'Inter', 'Segoe UI', -apple-system, sans-serif;
-}
-
-body {
-    background-color: white;
     color: #0B1B2B;
 }
 
-header.navbar {
+.navbar {
+    background: white;
+    border-bottom: 1px solid #E5E7EB;
     position: sticky;
     top: 0;
-    background-color: white;
-    border-bottom: 1px solid #E5E7EB;
     z-index: 1000;
 }
 
-.navbar-content {
+.navbar-container {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 16px;
 }
 
-.logo {
-    font-size: 1.5rem;
+.navbar-logo {
+    display: flex;
+    align-items: center;
     font-weight: bold;
 }
 
-.nav-links a {
-    margin: 0 1rem;
+.logo-mark {
+    width: 24px;
+    height: 24px;
+    background: #1B5BFF;
+    margin-left: 8px;
+}
+
+.navbar-links a {
+    margin: 0 16px;
     text-decoration: none;
     color: #0B1B2B;
 }
 
-.auth-buttons {
+.navbar-actions {
     display: flex;
 }
 
 .login-button, .placement-report-button {
     border: none;
-    border-radius: 50px;
-    padding: 0.5rem 1.5rem;
-    font-size: 0.9rem;
-    margin-left: 0.5rem;
+    border-radius: 25px;
+    padding: 14px 28px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-left: 8px;
 }
 
 .login-button {
-    border: 1px solid #1B5BFF;
     background-color: white;
-    color: #1B5BFF;
+    border: 2px solid #1B5BFF;
 }
 
 .placement-report-button {
@@ -63,30 +64,27 @@ header.navbar {
     color: white;
 }
 
-.login-button:hover {
-    background-color: #E5E7EB;
-}
-
 .hero {
     text-align: center;
     padding: 80px 20px;
+    position: relative;
+    background: white;
 }
 
-.eyebrow {
-    font-size: 0.875rem;
-    color: #1B5BFF;
+.hero-eyebrow {
+    font-size: 14px;
+    color: #7D8B8C;
 }
 
-h1 {
+.hero-heading {
     font-size: clamp(48px, 7vw, 96px);
-    line-height: 1.05;
-    margin: 1rem 0;
+    font-weight: bold;
 }
 
 .highlight {
-    background-color: rgba(113, 185, 239, 0.3);
-    border-radius: 20px;
-    padding: 0.1em 0.3em;
+    background: #AEEEEE;
+    padding: 4px 8px;
+    border-radius: 12px;
 }
 
 .gradient-text {
@@ -96,154 +94,148 @@ h1 {
 }
 
 .hero-subtext {
-    color: #6B7280;
-    margin: 0.5rem 0 1rem;
+    margin: 16px 0;
+    font-size: 18px;
+    color: #555;
 }
 
 .programs-label {
     font-weight: bold;
-    margin: 1rem 0;
+    margin-top: 16px;
 }
 
 .programs-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    font-size: 0.9rem;
+    margin: 8px 0;
 }
 
 .hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 40px;
 }
 
 .hero-buttons button {
+    border: none;
+    border-radius: 5px;
     padding: 14px 28px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0 8px;
 }
 
-.request-callback {
+.request-callback-button {
     background-color: #1B5BFF;
     color: white;
-    border: none;
-    cursor: pointer;
 }
 
-.book-free-class {
-    background: none;
-    border: 1px solid #1B5BFF;
-    color: #1B5BFF;
-    cursor: pointer;
-}
-
-.request-callback:hover {
-    background-color: #145EB0;
-}
-
-.book-free-class:hover {
-    background-color: #E5E7EB;
+.book-class-button {
+    background-color: white;
+    border: 2px solid #1B5BFF;
 }
 
 .why-scaler {
-    background-color: #1E3A8A;
+    background: #1D3D97;
     color: white;
+    padding: 80px 20px;
     text-align: center;
-    padding: 40px 20px;
+}
+
+.why-scaler-eyebrow {
+    font-size: 24px;
+}
+
+.why-scaler-heading {
+    font-size: 36px;
+}
+
+.why-scaler-subtext {
+    margin: 16px 0;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 1rem;
-    margin: 2rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 40px;
 }
 
 .feature-card {
-    background-color: white;
+    background: white;
     border-radius: 12px;
     padding: 20px;
-    color: #0B1B2B;
+    border: 1px solid #E5E7EB;
 }
 
 .feature-icon {
-    color: #1B5BFF;
+    width: 20px;
+    height: 20px;
+    background: blue; /* Placeholder for icon */
 }
 
 .logo-strip {
-    font-size: 0.875rem;
-    opacity: 0.8;
+    margin-top: 40px;
+    font-size: 18px;
 }
 
 .stories {
-    padding: 20px;
+    padding: 80px 20px;
     text-align: center;
+}
+
+.stories-eyebrow, .stories-heading, .stories-subtext {
+    margin: 16px 0;
 }
 
 .stories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 40px;
 }
 
 .stat-card, .video-card, .quote-card {
-    background-color: white;
+    background: white;
     border-radius: 12px;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    border: 1px solid #E5E7EB;
 }
 
-.person-card {
-    background-color: #E5E7EB;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
+.thumbnail {
+    width: 100%;
+    height: 200px;
+    background: gray; /* Placeholder for video thumbnail */
 }
 
-.people-behind {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.help-bar {
+.sticky-help-bar {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #1E3A8A;
+    background-color: #1D3D97;
     color: white;
-    padding: 10px;
+    padding: 16px;
     text-align: center;
 }
 
 footer {
     background-color: #F3F4F6;
+    color: #0B1B2B;
     padding: 40px 20px;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .footer-left {
     margin-bottom: 20px;
 }
 
-.footer-links, .socials {
-    margin-bottom: 20px;
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-.watermark {
+.footer-bottom {
+    margin-top: 40px;
     text-align: center;
-    font-size: 2rem;
-    color: #E5E7EB;
-    font-weight: bold;
-    opacity: 0.5;
+}
+
+.footer-watermark {
+    color: rgba(11, 27, 43, 0.1);
+    font-size: 48px;
 }
