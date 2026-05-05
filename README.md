@@ -8,6 +8,12 @@ The agent generates a structured clone of the Scaler Academy homepage using HTML
 
 ---
 
+## Sample Site
+
+A sample of the generated output is hosted at: https://kavyadhyani.github.io/CodePilot-CLI/
+
+---
+
 ## Features
 
 - Agentic loop using a THOUGHT → ACTION → DATA structure
